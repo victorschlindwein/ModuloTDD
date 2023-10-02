@@ -74,9 +74,9 @@ public class CalculadoraTestes
         calc.Somar(1, 2);
         calc.Somar(1, 2);
 
-        var lista = calc.ListarHistorico();
+        var lista = calc.ListarHistorico(3);
 
-        Assert.NotEmpty(calc.ListarHistorico());
+        Assert.NotEmpty(calc.ListarHistorico(3));
         Assert.Equal(3, lista.Count);
     }
 }
