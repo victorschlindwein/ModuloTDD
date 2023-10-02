@@ -44,9 +44,9 @@ public class CalculadoraTestes
     }
 
     [Theory]
-    [InlineData(1, 2, 3)]
-    [InlineData(3, 3, 6)]
-    [InlineData(5, 5, 10)]
+    [InlineData(1, 2, 2)]
+    [InlineData(3, 3, 9)]
+    [InlineData(5, 5, 25)]
     public void MultiplyTwoNumbersAndReturnResult(int n1, int n2, int result)
     {
         Calculadora calc = new Calculadora();
