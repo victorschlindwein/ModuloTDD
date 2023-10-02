@@ -2,10 +2,10 @@ using src;
 
 namespace tests;
 
-public class _calculadoraTestes
+public class CalculadoraTestes
 {
     private Calculadora _calc;
-    public _calculadoraTestes()
+    public CalculadoraTestes()
     {
         _calc = new Calculadora();
     }
