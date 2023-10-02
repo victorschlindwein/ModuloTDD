@@ -8,29 +8,44 @@ namespace src
 {
     public class Calculadora
     {
+        private List<string> listaHistorico;
+        public Calculadora()
+        {
+            listaHistorico = new List<string>();
+        }
+
         public int Somar(int num1, int num2)
         {
-            return 0;
+            var result = num1 + num2;
+            listaHistorico.Insert(0, result.ToString());
+            return result;
         }
 
         public int Subtrair(int num1, int num2)
         {
-            return 0;
+            var result = num1 - num2;
+            listaHistorico.Insert(0, result.ToString());
+            return result;
         }
 
         public int Multiplicar(int num1, int num2)
         {
-            return 0;
+            var result = num1 * num2;
+            listaHistorico.Insert(0, result.ToString());
+            return result;
         }
 
         public int Dividir(int num1, int num2)
         {
-            return 0;
+            var result = num1 / num2;
+            listaHistorico.Insert(0, result.ToString());
+            return result;
         }
 
-        public List<string> ListarHistorico()
+        public List<string> ListarHistorico(int qtdOperacoes)
         {
-            return new List<string>();
+            listaHistorico.RemoveRange(qtdOperacoes, listaHistorico.Count - qtdOperacoes);
+            return listaHistorico;
         }
     }
 }
